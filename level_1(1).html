@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var arr = []
+			function recur(){
+			  //code
+			  var result='';
+			  var repeat=[];
+			   arr=prompt("请输入字符串").split(',');
+			   console.log(arr);
+			   for (var i = 0; i < arr.length; i++) {
+			  	 var s=arr[i];
+			  	 arr[i]=arr[i].split('');
+			  	 //console.log(arr[i]);
+			  	 for(var j=0;j<arr[i].length;j++){
+			  		 var temp=s.replace(arr[i][j],'');
+			  		// console.log(temp);
+			  		 
+			  		 if(temp.indexOf(arr[i][j])>=0)
+			  		 {
+			  			result = result.concat(arr[i][j]);
+			  			//console.log(arr[i][j]);
+			  		 }
+			  			
+			  		 
+			  	 }
+			  	 
+			  	 repeat[i]=result;
+			  	 result='';
+			   	
+			   }
+			   console.log(repeat);
+			}
+			recur(arr) 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
